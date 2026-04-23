@@ -1,3 +1,105 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --mandiri-blue: #003a70;
+  --mandiri-blue-light: #0056a6;
+  --mandiri-blue-dark: #00264d;
+  --mandiri-gold: #f2a900;
+  --mandiri-gold-light: #ffc940;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 58, 112, 0.1);
+}
+
+.hero-gradient {
+  background: #003a70;
+}
+
+.gold-gradient {
+  background: linear-gradient(90deg, var(--mandiri-gold), var(--mandiri-gold-light));
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 58, 112, 0.15);
+}
+
+.testimonial-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+}
+
+.section-divider {
+  background: linear-gradient(90deg, transparent, var(--mandiri-gold), transparent);
+  height: 2px;
+}
+
+.btn-mandiri {
+  background: var(--mandiri-gold);
+  color: var(--mandiri-blue-dark);
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.btn-mandiri:hover {
+  background: var(--mandiri-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(242, 169, 0, 0.35);
+}
+
+.btn-outline-mandiri {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.btn-outline-mandiri:hover {
+  background: #ffffff;
+  color: var(--mandiri-blue);
+}
+
+.stat-item {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.stat-item:last-child {
+  border-right: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.promo-badge {
+  background: linear-gradient(135deg, var(--mandiri-gold), var(--mandiri-gold-light));
+  color: var(--mandiri-blue-dark);
+}
